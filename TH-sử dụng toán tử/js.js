@@ -1,0 +1,12 @@
+let width =+prompt("Enter the width");
+let height= +prompt("Enter the height");
+let area = width * height;
+document.write('Enter width:');
+document.write('<br/>');
+document.write( + width);
+document.write('<br/>');
+document.write('Enter height:');
+document.write('<br/>');
+document.write( + height);
+document.write('<br/>');
+document.write("The area is: " +area);
