@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><b>Amount</b></th>
+        <th><b>From Currency</b></th>
+        <th><b>To Currency</b></th>
+    </tr>
+    <tr>
+        <td>
+        <input type="text" name="number" id="number">
+        </td>
+        <td>
+            <select id="chon1">
+                <option value="a">Việt Nam</option>
+                <option value="b">USA</option>
+            </select>
+        </td>
+        <td>
+            <select id="chon2">
+                <option value="a">VietNam</option>
+                <option value="b">USA</option>
+            </select>
+        </td>
+        <td><input type="button" value="Convert" onclick="getconvert()">
+        </td>
+    </tr>
+</table>
+    <p id="result" style="color: blue"></p>
+<script>
+    function getconvert() {
+        let giatrivao=document.getElementById('number').value;
+        let select1=document.getElementById('chon1').value
+        let select2=document.getElementById('chon2').value;
+        if(select1 == select2) {
+            document.getElementById('result').innerHTML='Result: ' +giatrivao;
+        }
+        if (select1 == "a" && select2 == "b") {
+            document.getElementById('result').innerHTML='Result: ' + (giatrivao/24000);
+        }
+        if (select1 == "b" && select2 == "a") {
+            document.getElementById('result').innerHTML='Result: ' +giatrivao*24000;
+        }
+    }
+</script>
+</body>
+</html>
